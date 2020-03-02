@@ -1,5 +1,5 @@
 # Stage Timer
 
 ```
-py stageTimer.py <hour> <minute>
+$ py stageTimer.py <hour> <minute>
 ```
