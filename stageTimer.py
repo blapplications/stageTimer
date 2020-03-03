@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from appJar import gui
-import datetime, sys
+import datetime, sys, os
 
 year = datetime.datetime.now().year
 month = datetime.datetime.now().month
@@ -15,6 +15,15 @@ def runTimer():
     app.setLabel("time", timeLeft)
 
 app = gui("Stage timer", handleArgs=False)
+
+# Key events
+def keyPress(key):
+    if key == "<Up>":
+        app.increaseFont()
+    elif key == "<Down>":
+        app.decreaseFont()
+    elif key == "<F1>":
+        os.system('sudo shutdown now')
 
 # Window configuration
 app.setSize("Fullscreen")
@@ -32,4 +41,10 @@ app.getLabelWidget("time").config(font="Times 300")
 
 # Run App
 app.registerEvent(runTimer)
+
+app.bindKey("<Up>", keyPress)
+app.bindKey("<Down>", keyPress)
+app.bindKey("<F1>", keyPress)
 app.go()
+
+
