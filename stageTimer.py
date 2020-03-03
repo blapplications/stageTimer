@@ -18,7 +18,6 @@ app = gui("Stage timer", handleArgs=False)
 
 # Window configuration
 app.setSize("Fullscreen")
-app.hideTitleBar()
 app.setLocation(10, 10)
 app.setStretch("both")
 app.setSticky("nesw")
