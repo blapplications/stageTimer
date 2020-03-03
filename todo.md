@@ -10,4 +10,4 @@ $ sudo apt install python-tk
 ```
 $ crontab -e
 ```
-add @reboot sudo python '/<path>/<to>/<script>/stageTimer.py 18 30'
+add @reboot sudo python '/\<path>/\<to>/\<script>/stageTimer.py 18 30'
