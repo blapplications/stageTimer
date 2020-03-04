@@ -40,7 +40,7 @@ app.addLabel("time", "00:00:00")
 
 # Widget design
 #app.getLabelWidget("time").config(font="Times 300")
-app.setFont(size=200)
+app.setFont(size=250)
 # Run App
 app.registerEvent(runTimer)
 
